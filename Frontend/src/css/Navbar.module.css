@@ -1,0 +1,147 @@
+.topSIDE {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: #f5f5f5;
+  height: 60px;
+  position: relative;
+}
+
+.centerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  color: #3f5930;
+  white-space: nowrap;
+}
+
+.centerContent .homeIcon {
+  font-size: 24px;
+  color: #3f5930;
+}
+
+.centerContent .goToHomeText {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f5930;
+}
+
+
+.companyInfo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.name1 {
+  color: #a7b194;
+  font-weight: bold;
+  font-size: 32px; 
+  margin: 0;
+}
+
+.name2 {
+  color: #a7b194;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.username {
+  color: #a7b194;
+  font-weight: bold;
+}
+
+.profileIcon {
+  font-size: 24px; 
+  color: #a7b194;
+  cursor: pointer;
+}
+
+.profileIcon:hover {
+  color: #6b7c61;
+}
+
+
+.dropdownMenu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logoutButton {
+  background: #a7b194;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.logoutButton:hover {
+  background-color: #6b7c61;
+}
+
+
+@media (max-width: 768px) {
+  .name1 {
+    font-size: 28px; 
+  }
+
+  .name2 {
+    font-size: 12px;
+  }
+
+  .centerContent .goToHomeText {
+    font-size: 16px; 
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .centerContent .homeIcon {
+    font-size: 20px; 
+  }
+  
+  .topSIDE {
+    padding: 0.5rem; 
+  }
+}
+
+/* Centering .centerContent on larger screens */
+@media (min-width: 992px) {
+  .topSIDE {
+    justify-content: center;
+  }
+  
+  .companyInfo, .userInfo {
+    position: absolute;
+  }
+  
+  .companyInfo {
+    left: 1rem;
+  }
+  
+  .userInfo {
+    right: 1rem;
+  }
+}
+

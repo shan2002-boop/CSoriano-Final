@@ -1,0 +1,413 @@
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .closeModalButton {
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  
+  .scrollableTableContainer {
+    width: 100%;
+    overflow-x: auto;  
+    overflow-y: auto;  
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 400px; 
+    background-color: #fff;
+  }
+  
+  
+  .userTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .userTable th,
+  .userTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .userTable th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+  }
+  
+  .userTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .userTable th.centered,
+.userTable td.centered {
+  text-align: center;
+}
+  
+  .userTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  
+  .openModalButton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .openModalButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .deleteButton {
+    background-color: #e74c3c;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .deleteButton:hover {
+    background-color: #c0392b;
+  }
+  
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  
+  .closeModalButton {
+    background-color: #DC143C;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 15px;
+  }
+  
+  .scrollableTableContainer {
+    width: 100%;
+    overflow-x: auto;  
+    overflow-y: auto;  
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    max-height: 400px; 
+    background-color: #fff;
+  }
+  
+ 
+  .userTable {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .userTable th,
+  .userTable td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .userTable th {
+    background-color: #f3f3f3;
+    font-weight: bold;
+  }
+  
+  .userTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .userTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+
+  .modalContent {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideIn 0.4s ease-in-out;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+  .closeModalButton {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .closeModalButton:hover {
+    background-color: #c0392b;
+  }
+  
+ 
+  .openModalButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .openModalButton:hover {
+    background-color: #45a049;
+  }
+  
+
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .formGroup label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+  }
+  
+  .formGroup input,
+  .formGroup select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+
+  .passwordInputContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .passwordInputContainer input {
+    flex: 1;
+    padding-right: 40px; 
+  }
+  
+  .togglePasswordButton {
+    margin-left: -35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .togglePasswordButton:hover {
+    color: #0056b3;
+  }
+  
+  .modalContent button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modalContent button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  .modalContent .error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .modalContent .success {
+    color: #27ae60;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .resetButton {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .searchBar {
+    padding: 8px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  .centeredTitle {
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .filterButtons {
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .filterButton {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: large;
+  }
+  
+  .filterButton:hover {
+    background-color: #a7b194;
+    
+  }
+
+  .loadingSpinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+  }
+  
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db; 
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  

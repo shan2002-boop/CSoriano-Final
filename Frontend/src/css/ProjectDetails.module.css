@@ -1,0 +1,60 @@
+.detailsContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+
+  .h123{
+    text-align: center;
+  }
+  
+  .projectImage {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .bomDetails {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bomTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .bomTable th, .bomTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .bomTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  .bomTable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .totalRow {
+    text-align: right;
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  .projectImage {
+    width: 100%; /* Set the image to take the full width of its container */
+    max-width: 600px; /* Limit the maximum width of the image */
+    height: auto; /* Maintain the aspect ratio */
+    object-fit: cover; /* Ensures the image covers the space properly without stretching */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional: adds a shadow for better visuals */
+    margin: 0 auto; /* Centers the image horizontally */
+    display: block; /* Ensures the image behaves as a block-level element */
+  }
+  
+  

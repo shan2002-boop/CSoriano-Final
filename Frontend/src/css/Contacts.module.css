@@ -1,0 +1,61 @@
+.contactsContainer {
+    text-align: center;
+    background-color: white;
+    padding:  0;
+  }
+  
+  .header {
+    background-color: #7a8464;
+    color: white;
+    padding: 20px 0;
+    font-size: 24px;
+    letter-spacing: 1.5px;
+  }
+  
+  .contactDetails {
+    margin-top: 30px;
+  }
+  
+  .subHeading {
+    font-size: 18px;
+    color: #6d6d6d;
+    margin-bottom: 10px;
+  }
+  
+  .heading {
+    font-size: 48px;
+    color: #7a8464;
+    margin-bottom: 30px;
+  }
+  
+  .address {
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  
+  .contactInfo {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  .contactInfo div {
+    margin-bottom: 15px;
+  }
+  
+  .contactInfo div svg {
+    margin-right: 8px;
+    vertical-align: middle;
+    color: #7a8464;
+  }
+  
+  .phone,
+  .email,
+  .social {
+    font-weight: 500;
+  }
+
+  .facebook {
+    color: #6d6d6d;
+  }
+  

@@ -1,0 +1,659 @@
+
+
+.locationsContainer {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+  }
+  
+  .searchBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .searchInput {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .createLocationButton {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .locationCount {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .scrollableTableContainer {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .locationsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .locationsTable th,
+  .locationsTable td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .locationsTable th {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .locationsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .locationsTable tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .inputField {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 16px);
+    margin-bottom: 15px;
+  }
+  
+  .editButton,
+  .deleteButton,
+  .createButton,
+  .addFloorButton {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  .editButton {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  .deleteButton {
+    background-color: #DC143C;
+    color: #fff;
+  }
+  
+  .createButton {
+    background-color: #28a745;;
+    color: #fff;
+  }
+
+  .addFloorButton {
+    margin-bottom: 10px;
+  }
+  
+  /* Modal Styles */
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modalContent {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .modalScrollableContent {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  .closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .modalForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modalForm input,
+  .modalForm select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .modalForm button {
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .floorContainer {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+  }
+  
+  .taskContainer {
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .Projectbutton {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .deleteButton {
+    background-color: #DC143C;
+    color: #fff;
+  }
+
+  .updateStatusButton {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .updateStatusButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .modalScrollableContent {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+  
+  .bomModalContent {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .downloadButton {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .downloadButton:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+.loadingSpinnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3; 
+  border-top: 4px solid #3498db; 
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Status for ongoing projects */
+.ongoingStatus {
+  color: green;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+/* Status for finished projects */
+.finishedStatus {
+  color: red;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.modalForm {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.detailsSection {
+  margin-top: 10px;
+}
+
+.detailsSection h4 {
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.detailsSection p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.floorDetails, .taskDetails {
+  margin-left: 20px;
+  padding: 10px 0;
+}
+
+.downloadButton {
+  margin-top: 15px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.downloadButton:hover {
+  background-color: #0056b3;
+}
+
+/* Start Button */
+.startButton {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.startButton:hover {
+  background-color: #388e3c;
+}
+
+/* Postpone Button */
+.postponeButton {
+  background-color: #ffa726;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.postponeButton:hover {
+  background-color: #fb8c00;
+}
+
+/* Resume Button */
+.resumeButton {
+  background-color: #29b6f6;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.resumeButton:hover {
+  background-color: #039be5;
+}
+
+/* End Button */
+.endButton {
+  background-color: #e53935;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.endButton:hover {
+  background-color: #d32f2f;
+}
+
+.manualCheckboxLabel {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.manualCheckbox {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 8px; /* Adjust gap as needed for spacing */
+}
+
+.startButton, .editButton, .deleteButton, .postponeButton, .resumeButton, .endButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px; /* Adjust for icon spacing */
+}
+
+/* Progress Label */
+.progressLabel {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+}
+
+/* Input Field Placeholder and Border */
+.inputField::placeholder {
+  color: #aaa;
+}
+
+.inputField {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.inputField:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Manual Progress Checkbox */
+.manualCheckboxLabel {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.manualCheckbox {
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+.expandableHeader {
+  cursor: pointer;
+}
+
+.scrollableTaskList {
+  max-height: 200px; /* Adjust this value as needed */
+  overflow-y: auto;
+}
+
+/* Container for each floor with border and padding */
+.floorContainer {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header style for floor names */
+.floorHeader {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.floorHeader:hover {
+  background-color: #d1d1d1;
+}
+
+/* Expand/Collapse arrow */
+.floorHeader::after {
+  content: attr(data-expanded);
+  font-size: 1.2em;
+  color: #666;
+  margin-left: auto;
+}
+
+/* Scrollable task list container */
+.scrollableTaskList {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Style for individual tasks */
+.taskContainer {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+}
+
+.taskContainer input[type="text"],
+.taskContainer input[type="number"] {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+/* Button styles */
+.addTaskButton,
+.deleteTaskButton,
+.deleteFloorButton {
+  padding: 6px 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.addTaskButton {
+  background-color: #4caf50;
+}
+
+.addTaskButton:hover {
+  background-color: #45a049;
+}
+
+.deleteTaskButton {
+  background-color: #DC143C;
+}
+
+.deleteTaskButton:hover {
+  background-color: #e53935;
+}
+
+.deleteFloorButton {
+  background-color: #DC143C;
+}
+
+.deleteFloorButton:hover {
+  background-color: #e53935;
+}
+
+/* Manual Progress checkbox and label style */
+.manualCheckboxLabel {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.manualCheckboxLabel input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+/* Placeholder styling for inputs */
+input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.expandableHeader {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.expandableHeader:hover {
+  color: #007bff;
+}
+
+.detailsSection {
+  padding: 10px 0;
+}
+
+.scrollableTaskListContent {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-left: 20px;
+}
+
+.floorHeader {
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+  padding: 5px 0;
+}
+
+.floorHeader:hover {
+  color: #007bff;
+}
+
+.scrollableTaskList {
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-left: 3px solid #007bff;
+  border-radius: 4px;
+}
+
+.floorDetails {
+  margin: 10px 0;
+}
+
+
+
+
+
+
+  

@@ -1,0 +1,77 @@
+.aboutUsContainer {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+.header {
+  background-color: #6b775c;
+  color: white;
+  padding: 8px;
+  text-align: left;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 5%;
+  box-sizing: border-box;
+}
+
+.textContainer, .imageContainer {
+  opacity: 0; 
+  transform: translateY(50px) scale(0.9) rotate(3deg); 
+  transition: opacity 1s ease-out, transform 1.5s cubic-bezier(0.19, 1, 0.22, 1); 
+}
+
+.textContainer.visible, .imageContainer.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotate(0); 
+}
+
+.textContainer {
+  max-width: 60%;
+}
+
+.textContainer h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  transform: scale(1); 
+  transition: transform 0.7s ease-out;
+}
+
+.textContainer h1.visible {
+  transform: scale(1.2); 
+}
+
+.textContainer p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.signature {
+  font-family: 'Cursive', sans-serif;
+  font-size: 24px;
+  color: #333;
+}
+
+.imageContainer {
+  max-width: 35%;
+}
+
+.imageContainer img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  transform: scale(1) rotate(0); 
+  transition: transform 0.7s ease-out;
+}
+
+.imageContainer img.visible {
+  transform: scale(1.05) rotate(2deg);  
+}
